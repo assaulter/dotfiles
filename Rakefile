@@ -3,7 +3,7 @@ task :hello do
   puts 'hello!!'
 end
 
-desc "create symbolic link about dotfiles"
+desc "Create symbolic link to user home directory about dotfiles"
 task :link_dotfiles do
   # カレントのファイルを取得
   Dir::entries(Dir::pwd).each do |file|
