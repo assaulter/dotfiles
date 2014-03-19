@@ -16,6 +16,12 @@ install openssl
 install rbenv
 install brew-cask
 
+# used past list
+# install giter8
+# install memcached
+# install mysql
+
+
 # casks
 cask install iterm2
 cask install java
@@ -30,3 +36,4 @@ cask install sublime-text
 cask install intellij-idea-ce
 cask install appcleaner
 cask install coteditor
+cask install webstorm
