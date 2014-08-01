@@ -37,3 +37,4 @@ cask install sublime-text
 cask install intellij-idea-ce
 cask install appcleaner
 cask install rubymine
+cask install coteditor
