@@ -23,6 +23,19 @@
   trustExitCode = true
 [alias]
   delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+  co = checkout
+  cob = checkout -b
+  ci = commit
+  b = branch
+  s = status -s
+  d = diff
+  g = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  pl = pull --prune
+  ps = push
+  rb = rebase
+  mg = merge
+  sl = stash list
+  f = fetch --prune
 [color]
   ui = auto
 [pull]
