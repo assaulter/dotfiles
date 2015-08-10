@@ -102,3 +102,7 @@ eval "$(pyenv init -)"
 
 export PATH=/usr/local/sbin:$PATH
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+### for go lang
+export GOPATH=$HOME/go1.4
+export PATH=$PATH:$GOPATH/bin
