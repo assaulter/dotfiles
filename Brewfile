@@ -1,40 +1,48 @@
-# Make sure using latest Homebrew
-update
-
-# Update already-installed formula
-upgrade
-
-# Add Repository
-tap homebrew/versions
-tap phinze/homebrew-cask
-tap homebrew/binary
-
-# Packages
-install git
-install gibo
-install openssl
-install rbenv
-install brew-cask
-install libxml2
-install ghc
-
-# used past list
-# install giter8
-# install memcached
-# install mysql
-
-
-# casks
-cask install iterm2
-cask install java
-cask install dropbox
-cask install google-chrome
-cask install virtualbox
-cask install vagrant
-cask install kobito
-cask install sourcetree
-cask install sublime-text
-cask install intellij-idea-ce
-cask install appcleaner
-cask install rubymine
-cask install coteditor
+tap 'caskroom/cask'
+tap 'dart-lang/dart'
+tap 'homebrew/binary'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/dupes'
+tap 'homebrew/php'
+tap 'homebrew/versions'
+brew 'autoconf'
+brew 'aws-elasticbeanstalk'
+brew 'awscli'
+brew 'cmake'
+brew 'libpng'
+brew 'freetype'
+brew 'gdbm'
+brew 'gettext'
+brew 'gibo'
+brew 'git'
+brew 'git-flow'
+brew 'go'
+brew 'icu4c'
+brew 'jpeg'
+brew 'libxml2'
+brew 'makedepend'
+brew 'mhash'
+brew 'mcrypt'
+brew 'openssl'
+brew 'mysql'
+brew 'node'
+brew 'pcre'
+brew 'pidof'
+brew 'pkg-config'
+brew 'pwgen'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'readline'
+brew 'redis'
+brew 'sbt'
+brew 'scala'
+brew 'tree'
+brew 'unixodbc'
+brew 'yarn'
+brew 'zsh'
+brew 'dart-lang/dart/dart'
+brew 'homebrew/dupes/apple-gcc42'
+brew 'homebrew/dupes/zlib'
+brew 'homebrew/php/php55'
+brew 'homebrew/php/php55-mcrypt'
