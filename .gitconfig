@@ -19,3 +19,5 @@
 	ci = commit
 	d = diff
 	pl = pull
+[credential]
+	helper = osxkeychain
