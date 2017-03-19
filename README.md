@@ -24,3 +24,8 @@ $ brew bundle
 ```
 $ brew dump
 ```
+
+#### dotfileを修正する
+```
+rake link_dotfiles
+```
