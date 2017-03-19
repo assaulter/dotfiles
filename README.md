@@ -19,3 +19,8 @@ Brewfileがあるディレクトリで下記コマンドを実行
 $ brew bundle
 ```
 
+現状インストールされているものをBrewfileに吐き出すには
+
+```
+$ brew dump
+```
