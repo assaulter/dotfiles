@@ -79,6 +79,8 @@ alias gcc=llvm-gcc
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 ### add paths
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/bin:$PATH
 
 ### for sublime text
 export EDITOR='subl -w'
@@ -100,7 +102,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-export PATH=/usr/local/sbin:$PATH
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 ### for go lang
