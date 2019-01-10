@@ -103,7 +103,7 @@ export PATH=/usr/local/bin:$PATH
 
 ### rbenv setting
 # export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 ### nodebrewの設定
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -126,9 +126,9 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 #export PATH=$PATH:$GOPATH/bin
 
 ### open
-alias coteditor='open $1 -a "/Applications/CotEditor.app"'
-export PATH="$HOME/.ndenv/bin:$PATH"
-eval "$(ndenv init -)"
+# alias coteditor='open $1 -a "/Applications/CotEditor.app"'
+# export PATH="$HOME/.ndenv/bin:$PATH"
+# eval "$(ndenv init -)"
 
 # direnv
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
