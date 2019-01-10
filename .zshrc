@@ -129,3 +129,6 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 alias coteditor='open $1 -a "/Applications/CotEditor.app"'
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
+
+# direnv
+eval "$(direnv hook zsh)"
