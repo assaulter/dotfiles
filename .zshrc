@@ -1,6 +1,9 @@
 setopt prompt_subst
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
 
+export GOPATH=$HOME/Develop/go
+export PATH=$PATH:$GOPATH/bin
+
 function rprompt-git-current-branch {
   local name st color gitdir action
   if [[ "$PWD" =~ '/¥.git(/.*)?$' ]]; then
@@ -26,6 +29,22 @@ function rprompt-git-current-branch {
   fi
   echo "$color$name$action%f%b "
 }
+
+# https://qiita.com/yuyuchu3333/items/84fa4e051c3325098be3
+# 色の設定
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+
+if [ -f ~/.dircolors ]; then
+    if type dircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    elif type gdircolors > /dev/null 2>&1; then
+        eval $(gdircolors ~/.dircolors)
+    fi
+fi
+
+if [ -n "$LS_COLORS" ]; then
+    zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+fi
 
 # -------------- 使い方 ---------------- #
 RPROMPT='`rprompt-git-current-branch`'
@@ -66,7 +85,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # alias
-alias ls="ls -G"
+alias ls="gls --color"
 alias beep='echo -e "\a"'
 alias r='rails'
 alias safari='open -a Safari'
@@ -76,34 +95,37 @@ alias be='bundle exec'
 alias g='git'
 alias gcc=llvm-gcc
 
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+# zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 ### add paths
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/bin:$PATH
 
-### for sublime text
-export EDITOR='subl -w'
-
 ### rbenv setting
-export PATH="$HOME/.rbenv/bin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 ### nodebrewの設定
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 ### playのpathの設定
-export PATH=/usr/local/play:$PATH
+#export PATH=/usr/local/play:$PATH
+
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+#export PATH="/usr/local/heroku/bin:$PATH"
 
 ### pythonの設定
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 ### for go lang
-export GOPATH=$HOME/go1.4
-export PATH=$PATH:$GOPATH/bin
+#export GOPATH=$HOME/go1.4
+#export PATH=$PATH:$GOPATH/bin
+
+### open
+alias coteditor='open $1 -a "/Applications/CotEditor.app"'
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
