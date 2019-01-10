@@ -15,6 +15,7 @@ git clone https://github.com/assaulter/dotfiles.git ~/dotfiles
 
 ## install
 ```
+# install brew command if it isn't installed.
 bash ~/dotfiles/setup.sh initialize
 ```
 
