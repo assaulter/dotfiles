@@ -132,3 +132,6 @@ function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# anyenv
+eval "$(anyenv init -)"
