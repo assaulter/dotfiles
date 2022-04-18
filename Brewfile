@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "carthage"
 brew "coreutils"
 brew "direnv"
 brew "ffmpeg"
@@ -16,5 +15,4 @@ brew "reattach-to-user-namespace"
 brew "swiftlint"
 brew "tmux"
 brew "zsh", args: ["without-etcdir"]
-cask "alacritty"
 cask "pusher"
