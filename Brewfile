@@ -12,7 +12,6 @@ brew "plantuml"
 brew "postgresql"
 brew "rbenv"
 brew "reattach-to-user-namespace"
-brew "swiftlint"
 brew "tmux"
 brew "zsh", args: ["without-etcdir"]
 cask "pusher"
